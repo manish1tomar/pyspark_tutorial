@@ -12,3 +12,6 @@ df_pyspark.filter('Salary<=20000').select(['Name','Age']).show()
 df_pyspark.filter(df_pyspark['Salary'] <= 20000).show()
 df_pyspark.filter( (df_pyspark['Salary'] <= 20000) & (df_pyspark['Salary'] >= 50000) ).show()
 df_pyspark.filter( (df_pyspark['Salary'] <= 20000) | (df_pyspark['Salary'] >= 50000) ).show()
+
+###Not Condition
+df_pyspark.filter(~(df_pyspark['Salary'] <= 20000)).show()
